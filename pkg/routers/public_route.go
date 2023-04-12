@@ -39,6 +39,10 @@ func SetupPublicRoutes(app *fiber.App) {
 	//Front-End
 	bakawanRoutes := app.Group("/Bakawan")
 	bakawanRoutes.Post("/login", controllers.LoginAPI)
+
+	//pdf test
+	pdftestRoutes := app.Group("/pdftest")
+	pdftestRoutes.Get("/download", controllers.PdfTester)
 }
 
 func SetupPublicRoutesB(app *fiber.App) {
